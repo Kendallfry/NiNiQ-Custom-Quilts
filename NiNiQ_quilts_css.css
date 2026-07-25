@@ -1,0 +1,392 @@
+/* ==================================================
+   SHOP QUILTS PAGE
+================================================== */
+
+
+/* ==================================================
+   SHOP HERO
+================================================== */
+
+.shop-hero {
+  padding:
+    clamp(4rem, 8vw, 7.5rem) max(20px, calc((100vw - var(--page-width)) / 2));
+  background:
+    linear-gradient(125deg,
+      rgba(235, 205, 195, 0.8),
+      rgba(241, 233, 255, 0.48));
+}
+
+.shop-hero-layout {
+  display: grid;
+  align-items: end;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+}
+
+.shop-hero-content {
+  max-width: 850px;
+}
+
+.shop-hero h1 {
+  margin-bottom: 1.75rem;
+}
+
+.shop-hero h1 em {
+  display: block;
+  color: var(--color-coral-dark);
+  font-weight: 500;
+}
+
+.shop-hero-content p {
+  max-width: 650px;
+  margin-bottom: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+}
+
+.shop-hero-note {
+  padding: 1.75rem;
+  border: 1px solid rgba(74, 58, 50, 0.12);
+  border-radius: var(--radius-medium);
+  background: rgba(255, 253, 251, 0.68);
+  backdrop-filter: blur(14px);
+}
+
+.shop-hero-note span {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.shop-hero-note p {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   COLLECTION TOOLBAR
+================================================== */
+
+.collection-toolbar {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.collection-toolbar-layout {
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.collection-count {
+  display: grid;
+}
+
+.collection-count span {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collection-count strong {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.collection-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #758c63;
+  box-shadow: 0 0 0 5px rgba(117, 140, 99, 0.12);
+}
+
+
+/* ==================================================
+   QUILT COLLECTION
+================================================== */
+
+.quilt-collection {
+  background: var(--color-background);
+}
+
+.quilt-grid {
+  display: grid;
+  gap: clamp(2rem, 4vw, 4rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quilt-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.quilt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+
+/* ==================================================
+   QUILT GALLERY
+================================================== */
+
+.quilt-gallery {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface-soft);
+}
+
+.quilt-slides,
+.quilt-slides .slide {
+  width: 100%;
+  height: 100%;
+}
+
+.quilt-slides .slide {
+  display: none;
+  object-fit: cover;
+}
+
+.quilt-slides .slide:first-child {
+  display: block;
+}
+
+.slide-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(74, 58, 50, 0.12);
+  border-radius: 50%;
+  background: rgba(255, 253, 251, 0.9);
+  color: var(--color-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(10px);
+  transition:
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.slide-button:hover {
+  background: var(--color-white);
+}
+
+.slide-button.prev {
+  left: 1rem;
+}
+
+.slide-button.next {
+  right: 1rem;
+}
+
+.quilt-badge {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 253, 251, 0.92);
+  color: var(--color-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+
+/* ==================================================
+   QUILT INFORMATION
+================================================== */
+
+.quilt-card-content {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.quilt-card-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.quilt-category {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--color-coral-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.quilt-card-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.quilt-price {
+  flex-shrink: 0;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+}
+
+.quilt-description {
+  margin-bottom: 1.75rem;
+}
+
+.quilt-details {
+  display: grid;
+  margin: 0 0 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.quilt-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.quilt-details dt {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.quilt-details dd {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.quilt-card-content .button {
+  width: 100%;
+}
+
+
+/* ==================================================
+   VIEW BAG CTA
+================================================== */
+
+.shop-cart-cta {
+  margin-top: clamp(4rem, 8vw, 7rem);
+  text-align: center;
+}
+
+.shop-cart-cta p {
+  margin-bottom: 1rem;
+}
+
+
+/* ==================================================
+   CUSTOM QUILT CTA
+================================================== */
+
+.shop-custom-cta {
+  background: var(--color-surface-soft);
+  text-align: center;
+}
+
+.shop-custom-cta h2 {
+  margin-inline: auto;
+}
+
+.shop-custom-cta .lead-text {
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+}
+
+
+/* ==================================================
+   RESPONSIVE SHOP PAGE
+================================================== */
+
+@media (max-width: 900px) {
+  .shop-hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-hero-note {
+    max-width: 500px;
+  }
+
+  .quilt-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shop-hero h1 em {
+    display: inline;
+  }
+
+  .collection-toolbar-layout {
+    min-height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-block: 1.5rem;
+  }
+
+  .quilt-gallery {
+    aspect-ratio: 5 / 4;
+  }
+
+  .slide-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quilt-card-heading {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .quilt-details div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .quilt-details dd {
+    text-align: left;
+  }
+}
