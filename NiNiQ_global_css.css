@@ -442,6 +442,17 @@ p {
    MOBILE NAVIGATION
 ================================================== */
 
+/* Desktop defaults */
+.mobile-nav {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Mobile layout */
+   
 @media (max-width: 760px) {
   .header-container {
     min-height: 72px;
@@ -481,10 +492,6 @@ p {
     font-family: var(--font-heading);
     font-size: 1.65rem;
   }
-
-  .cart-link>span:first-child {
-    display: none;
-  }
 }
 
 
@@ -522,3 +529,5 @@ p {
     transform: none;
   }
 }
+
+   
