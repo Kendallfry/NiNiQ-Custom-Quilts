@@ -372,7 +372,7 @@ p {
   color: var(--color-coral-dark);
   transform: translateY(-1px);
 
-   
+}
 
 
 .cart-count {
@@ -442,14 +442,6 @@ p {
    MOBILE NAVIGATION
 ================================================== */
 
-/* Desktop defaults */
-.mobile-nav {
-  display: none;
-}
-
-.menu-button {
-  display: none;
-}
 
 /* Mobile layout */
    
