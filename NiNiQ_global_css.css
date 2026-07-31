@@ -444,6 +444,14 @@ p {
 
 
 /* Mobile layout */
+
+.mobile-nav {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+}
    
 @media (max-width: 760px) {
   .header-container {
