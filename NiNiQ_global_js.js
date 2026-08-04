@@ -1,4 +1,82 @@
 /* ==================================================
+   SHARED HEADER AND FOOTER
+================================================== */
+
+const sharedHeader = document.querySelector("#site-header");
+const sharedFooter = document.querySelector("#site-footer");
+
+if (sharedHeader) {
+  sharedHeader.innerHTML = `
+    <header class="site-header">
+      <div class="header-container">
+        <a href="index.html" class="brand-logo" aria-label="NiNi-Q home">
+          <img src="logo.65.png" alt="NiNi-Q logo">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="NiNiQ_quilts.html">Shop Quilts</a>
+          <a href="NiNiQ_about.html">About</a>
+          <a href="NiNiQ_custom.html">Custom Request</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="NiNiQ_cart.html" class="cart-link" aria-label="View shopping bag">
+            <svg class="shopping-bag-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 8.5h11l1 12h-13l1-12Z"></path>
+              <path d="M9 9V6.75C9 5.23 10.34 4 12 4s3 1.23 3 2.75V9"></path>
+            </svg>
+            <span class="cart-count">0</span>
+          </a>
+
+          <button type="button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="NiNiQ_quilts.html">Shop Quilts</a>
+        <a href="NiNiQ_about.html">About</a>
+        <a href="NiNiQ_custom.html">Custom Request</a>
+      </nav>
+    </header>
+  `;
+}
+
+if (sharedFooter) {
+  sharedFooter.innerHTML = `
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="NiNi-Q home">
+            <img src="logo.65.png" alt="NiNi-Q logo">
+          </a>
+          <p>Professionally designed. Handcrafted with intention. Made to be treasured.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="NiNiQ_quilts.html">Shop Quilts</a>
+          <a href="NiNiQ_about.html">About</a>
+          <a href="NiNiQ_custom.html">Custom Request</a>
+          <a href="NiNiQ_cart.html">Shopping Bag</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="copyright-year"></span> NiNi-Q Quilts. All rights reserved.</p>
+      </div>
+    </footer>
+  `;
+
+  const copyrightYear = sharedFooter.querySelector(".copyright-year");
+  copyrightYear.textContent = new Date().getFullYear();
+}
+
+
+/* ==================================================
    GLOBAL HEADER
 ================================================== */
 
