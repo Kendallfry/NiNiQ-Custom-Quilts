@@ -137,10 +137,10 @@
               <span class="custom-detail-number">03</span>
 
               <div>
-                <h3>Your Timeline</h3>
+                <h3>Your Occasion</h3>
                 <p>
-                  Let us know whether the quilt is connected to a birthday,
-                  wedding, baby shower, holiday, or another special date.
+                  Let us know if the quilt is for a special occasion, event,
+                  milestone, or meaningful date.
                 </p>
               </div>
 
@@ -150,12 +150,23 @@
 
           <div class="custom-information-note">
 
-            <span>What happens next?</span>
+            <span>What to expect next</span>
 
-            <p>
-              After reviewing your request, NiNi-Q will follow up to discuss
-              design options, timing, availability, and estimated pricing.
-            </p>
+            <ol>
+              <li>
+                NiNi-Q will follow up to discuss your request in detail,
+                including timing, availability, and design direction.
+              </li>
+              <li>
+                You will receive a proposed design summary outlining details
+                such as size, color, and overall direction.
+              </li>
+              <li>
+                Once the design is approved by email, a nonrefundable 50%
+                deposit is required. The remaining balance is due before
+                shipment.
+              </li>
+            </ol>
 
           </div>
 
@@ -180,14 +191,14 @@
 
           </div>
 
-          <!--
-            Add your existing Formspree URL to the action attribute.
+          <form class="custom-form" action="https://formspree.io/f/mvkpkkjw" method="POST">
 
-            Example:
-            action="https://formspree.io/f/your-form-id"
-          -->
+            <input type="hidden" name="subject" value="New NiNi-Q Custom Quilt Request">
 
-          <form class="custom-form" action="" method="POST">
+            <div class="form-trap" aria-hidden="true">
+              <label for="company-website">Leave this field blank</label>
+              <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
 
             <div class="form-row">
 
@@ -197,7 +208,7 @@
                   Name <span aria-hidden="true">*</span>
                 </label>
 
-                <input type="text" id="customer-name" name="customer-name" placeholder="Your full name"
+                <input type="text" id="customer-name" name="name" placeholder="Your full name"
                   autocomplete="name" required>
 
               </div>
@@ -208,7 +219,7 @@
                   Email <span aria-hidden="true">*</span>
                 </label>
 
-                <input type="email" id="customer-email" name="customer-email" placeholder="your@email.com"
+                <input type="email" id="customer-email" name="email" placeholder="your@email.com"
                   autocomplete="email" required>
 
               </div>
@@ -224,7 +235,7 @@
                   Phone Number
                 </label>
 
-                <input type="tel" id="customer-phone" name="customer-phone" placeholder="(555) 555-5555"
+                <input type="tel" id="customer-phone" name="phone" placeholder="(555) 555-5555"
                   autocomplete="tel">
 
               </div>
@@ -301,7 +312,7 @@
                 <span aria-hidden="true">*</span>
               </label>
 
-              <textarea id="quilt-description" name="quilt-description" rows="8"
+              <textarea id="quilt-description" name="message" rows="8"
                 placeholder="Tell us about the style, colors, size, theme, occasion, timeline, or inspiration you have in mind."
                 required></textarea>
 
@@ -309,6 +320,23 @@
                 Include any special memories, people, places, or occasions you
                 would like the design to represent.
               </p>
+
+            </div>
+
+
+            <div class="inspiration-email-note">
+
+              <div>
+                <span>Have inspiration images?</span>
+                <p>
+                  After submitting this request, email your JPEG or PNG images
+                  separately and include your name in the subject line.
+                </p>
+              </div>
+
+              <a class="text-link" href="mailto:niniqdesign@gmail.com?subject=Custom%20Quilt%20Inspiration%20Images">
+                Email Images
+              </a>
 
             </div>
 
@@ -387,7 +415,7 @@
             <h3>Discuss the Details</h3>
 
             <p>
-              We will connect to discuss design direction, availability,
+              NiNi-Q will follow up to discuss design direction, availability,
               estimated timing, and pricing.
             </p>
 
@@ -397,11 +425,12 @@
 
             <span>03</span>
 
-            <h3>Approve the Design</h3>
+            <h3>Review and Approve</h3>
 
             <p>
-              The final direction is confirmed before materials are selected
-              and construction begins.
+              You will receive a proposed design summary with details such as
+              size and color. After email approval, a nonrefundable 50%
+              deposit is required.
             </p>
 
           </article>
@@ -414,7 +443,8 @@
 
             <p>
               Your quilt is carefully cut, pieced, stitched, finished, and
-              prepared for its new home.
+              prepared for its new home. The remaining balance is due before
+              shipment.
             </p>
 
           </article>
