@@ -1,4 +1,4 @@
-# NiNiQ-Custom-Quilts (updated 7/25/26)
+# NiNiQ-Custom-Quilts 
 This is a custom quilt website for Jennifer Quach, a business owner and professional designer that handmakes custom quilts for retail. She has a company called NiNi-Q quilts.
 The site is about 75% finished and will be fully functional soon. 
 The site is made from scratch with AI assistance. 
