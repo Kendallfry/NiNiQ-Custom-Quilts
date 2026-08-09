@@ -15,9 +15,22 @@ if (sharedHeader) {
 
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
-          <a href="NiNiQ_quilts.html">Shop Quilts</a>
+
+          <div class="nav-dropdown">
+            <a href="NiNiQ_quilts.html" class="nav-dropdown-trigger" aria-haspopup="true">
+              Shop Quilts
+              <span class="dropdown-arrow" aria-hidden="true"></span>
+            </a>
+
+            <div class="nav-dropdown-menu">
+              <a href="NiNiQ_quilts.html">Quilts</a>
+              <a href="NiNiQ_patterns.html">Digital Patterns</a>
+            </div>
+          </div>
+
           <a href="NiNiQ_about.html">About</a>
           <a href="NiNiQ_custom.html">Custom Request</a>
+          <a href="NiNiQ_contact.html">Contact</a>
         </nav>
 
         <div class="header-actions">
@@ -38,9 +51,22 @@ if (sharedHeader) {
 
       <nav class="mobile-nav" aria-label="Mobile navigation">
         <a href="index.html">Home</a>
-        <a href="NiNiQ_quilts.html">Shop Quilts</a>
+
+        <div class="mobile-nav-group">
+          <button type="button" class="mobile-shop-toggle" aria-expanded="false">
+            Shop Quilts
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </button>
+
+          <div class="mobile-shop-menu">
+            <a href="NiNiQ_quilts.html">Quilts</a>
+            <a href="NiNiQ_patterns.html">Digital Patterns</a>
+          </div>
+        </div>
+
         <a href="NiNiQ_about.html">About</a>
         <a href="NiNiQ_custom.html">Custom Request</a>
+        <a href="NiNiQ_contact.html">Contact</a>
       </nav>
     </header>
   `;
@@ -59,8 +85,11 @@ if (sharedFooter) {
 
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="NiNiQ_quilts.html">Shop Quilts</a>
+          <a href="NiNiQ_patterns.html">Digital Patterns</a>
           <a href="NiNiQ_about.html">About</a>
           <a href="NiNiQ_custom.html">Custom Request</a>
+          <a href="NiNiQ_contact.html">Contact</a>
+          <a href="https://www.instagram.com/niniq_designs" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="NiNiQ_cart.html">Shopping Bag</a>
         </nav>
       </div>
@@ -126,6 +155,18 @@ if (menuButton && mobileNav) {
   });
 }
 
+const mobileShopToggle = document.querySelector(".mobile-shop-toggle");
+const mobileShopMenu = document.querySelector(".mobile-shop-menu");
+
+if (mobileShopToggle && mobileShopMenu) {
+  mobileShopToggle.addEventListener("click", function () {
+    const submenuIsOpen = mobileShopMenu.classList.toggle("open");
+
+    mobileShopToggle.classList.toggle("open", submenuIsOpen);
+    mobileShopToggle.setAttribute("aria-expanded", submenuIsOpen.toString());
+  });
+}
+
 
 /* ==================================================
    ACTIVE NAVIGATION LINK
@@ -145,6 +186,17 @@ navigationLinks.forEach(function (link) {
     link.classList.add("active");
   }
 });
+
+if (
+  currentPage === "NiNiQ_quilts.html" ||
+  currentPage === "NiNiQ_patterns.html"
+) {
+  const shopTrigger = document.querySelector(".nav-dropdown-trigger");
+
+  if (shopTrigger) {
+    shopTrigger.classList.add("active");
+  }
+}
 
 
 /* ==================================================

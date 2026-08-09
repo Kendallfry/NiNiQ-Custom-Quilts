@@ -1,0 +1,140 @@
+.patterns-hero {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+}
+
+.patterns-layout {
+  display: grid;
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.patterns-content h1 {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+  font-size: clamp(3.25rem, 6.5vw, 6.5rem);
+}
+
+.patterns-content p {
+  max-width: 650px;
+}
+
+.patterns-lead {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+}
+
+.patterns-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.patterns-visual {
+  position: relative;
+  min-height: 620px;
+}
+
+.pattern-image {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+}
+
+.pattern-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pattern-image-large {
+  top: 0;
+  right: 0;
+  width: 78%;
+  height: 82%;
+}
+
+.pattern-image-small {
+  bottom: 0;
+  left: 0;
+  width: 46%;
+  height: 46%;
+  border: 10px solid var(--color-background);
+}
+
+.coming-soon-note {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 2rem;
+  display: grid;
+  min-width: 180px;
+  gap: 0.15rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: var(--radius-small);
+  background: var(--color-surface-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.coming-soon-note span {
+  color: var(--color-coral-dark);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.coming-soon-note strong {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.patterns-message {
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.patterns-message .lead-text {
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .patterns-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .patterns-visual {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .patterns-hero {
+    min-height: 0;
+  }
+
+  .patterns-actions {
+    display: grid;
+  }
+
+  .patterns-visual {
+    min-height: 440px;
+  }
+
+  .pattern-image-large {
+    width: 88%;
+  }
+
+  .pattern-image-small {
+    width: 52%;
+  }
+
+  .coming-soon-note {
+    right: 0.5rem;
+    bottom: 1rem;
+    min-width: 155px;
+  }
+}
