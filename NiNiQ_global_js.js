@@ -230,8 +230,28 @@ updateCartCount();
 ================================================== */
 
 const revealElements = document.querySelectorAll(".reveal");
+const reducedMotionIsPreferred = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
-if ("IntersectionObserver" in window) {
+function showRevealElementsImmediately() {
+  revealElements.forEach(function (element) {
+    element.classList.add("visible");
+  });
+}
+
+if (reducedMotionIsPreferred || !("IntersectionObserver" in window)) {
+  showRevealElementsImmediately();
+} else {
+  const quiltRevealElements = document.querySelectorAll(
+    ".quilt-grid .quilt-card.reveal"
+  );
+
+  quiltRevealElements.forEach(function (element, index) {
+    const columnDelay = index % 2 === 0 ? 0 : 110;
+    element.style.setProperty("--reveal-delay", columnDelay + "ms");
+  });
+
   const revealObserver = new IntersectionObserver(
     function (entries, observer) {
       entries.forEach(function (entry) {
@@ -242,15 +262,20 @@ if ("IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.15
+      threshold: 0.08,
+      rootMargin: "0px 0px -8% 0px"
     }
   );
 
-  revealElements.forEach(function (element) {
-    revealObserver.observe(element);
-  });
-} else {
-  revealElements.forEach(function (element) {
-    element.classList.add("visible");
+  /*
+    Waiting for two animation frames lets the browser paint the hidden
+    starting position before visible items begin their transition.
+  */
+  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function () {
+      revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+      });
+    });
   });
 }
