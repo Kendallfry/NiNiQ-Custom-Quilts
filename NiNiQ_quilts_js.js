@@ -17,6 +17,11 @@ quiltCards.forEach(function (card) {
     return;
   }
 
+  if (slides.length === 1) {
+    previousButton.hidden = true;
+    nextButton.hidden = true;
+  }
+
   let currentSlide = 0;
 
   function showSlide(index) {
