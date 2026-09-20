@@ -25,6 +25,7 @@ if (sharedHeader) {
             <div class="nav-dropdown-menu">
               <a href="NiNiQ_quilts.html">Quilts</a>
               <a href="NiNiQ_patterns.html">Digital Patterns</a>
+              <a href="pattern-corrections.html">Pattern Corrections</a>
             </div>
           </div>
 
@@ -61,6 +62,7 @@ if (sharedHeader) {
           <div class="mobile-shop-menu">
             <a href="NiNiQ_quilts.html">Quilts</a>
             <a href="NiNiQ_patterns.html">Digital Patterns</a>
+            <a href="pattern-corrections.html">Pattern Corrections</a>
           </div>
         </div>
 
@@ -95,6 +97,11 @@ if (sharedFooter) {
       </div>
 
       <div class="footer-bottom">
+        <nav class="footer-policy-links" aria-label="Policies">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="returns.html">Returns &amp; Refunds</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
         <p>&copy; <span class="copyright-year"></span> NiNi-Q Quilts. All rights reserved.</p>
       </div>
     </footer>
@@ -189,7 +196,8 @@ navigationLinks.forEach(function (link) {
 
 if (
   currentPage === "NiNiQ_quilts.html" ||
-  currentPage === "NiNiQ_patterns.html"
+  currentPage === "NiNiQ_patterns.html" ||
+  currentPage === "pattern-corrections.html"
 ) {
   const shopTrigger = document.querySelector(".nav-dropdown-trigger");
 

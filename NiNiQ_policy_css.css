@@ -1,0 +1,20 @@
+.policy-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 2rem;
+}
+.policy-content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+.policy-content h3 { margin-top: 2rem; }
+.policy-content p, .policy-content ul { margin-bottom: 1.25rem; }
+.policy-content ul { color: var(--color-muted); padding-left: 1.5rem; }
+.policy-content li + li { margin-top: 0.4rem; }
+.policy-content a {
+  color: var(--color-coral-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.policy-content a:hover { color: var(--color-text); }

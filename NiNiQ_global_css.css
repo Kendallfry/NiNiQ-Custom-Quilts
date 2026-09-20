@@ -753,3 +753,18 @@ p {
 }
 
    
+
+/* Shared policy links */
+.footer-policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.5rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+.footer-policy-links a:hover,
+.footer-policy-links a:focus-visible {
+  color: var(--color-coral-dark);
+  text-decoration: underline;
+}
